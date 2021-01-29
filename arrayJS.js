@@ -11,7 +11,7 @@
 //        ['banana','blueberry'],
 //        ['orange']
 //    ] */
-// codingan
+// // codingan
 // var buah =['blueberry','apple', 'orange','anggur', 'banana'];
 // var kamus ='abcdefghijklmnopqrstuvwxyz'
 // var result =[];
@@ -56,43 +56,84 @@
 // 7. push var kelipatan 2 dan 1 ke dalam variable array kosong 
 
 // var jalan='kamu makan bersama teman kamu';
-// var arrjalan= jalan.trim().split(' ');
-// var group=[]
-// var kelipatan2=[]
-// var kelipatan1=[]
-// for (var i=0; i < arrjalan.length;i++){
-//     if(arrjalan.indexOf(arrjalan[i])!== arrjalan.lastIndexOf(arrjalan[i])){
-//         kelipatan2.push(arrjalan[i].toUpperCase(0))
-//     }else {
-//         kelipatan1.push(arrjalan[i].toUpperCase(0))
-//     }
-// }
-// group.push(kelipatan2);
-// group.push(kelipatan1);
-// console.log(group)
-
-// codingan logic
-// var jalan='kamu makan bersama teman kamu';
-// var arrjalan=[];
+// var arrjalan= []; 
+// var result=[]
 // var str=''
-
-// for (var i=0;i<jalan.length;i++){
-//     if (jalan[i]!==''){
-//         if (str.length===0){
-//             str+=jalan[i].toUpperCase()
-//         }else{
-//             str+=jalan[i]
-//         }
-//     } else (
+// for (var i=0; i<jalan.length;i++){
+//     if (jalan[i]!==' '){
+//         str+=jalan[i]
+//         } else{
 //         arrjalan.push(str);
 //         str=''
 //     }
-//     if(i=== jalan.length-1){
+//     if (i===jalan.length-i){
+//         arrjalan.push(str);
+//         str=''
+//     }
+//     if ( arrjalan.length !==0){
+//         result.push(arrjalan)
+//     }
+// }
+// console.log(result)
+
+// var jalan='kamu makan bersama teman kamu';
+// var arrjalan= []; 
+// var result=[]
+// var str=''
+// for (var i=0; i<jalan.length;i++){
+//     if (jalan[i]!==' '){
+//         str+=jalan[i]
+//         } else{
+//         arrjalan.push(str);
+//         str=''
+//     }
+//     if (i===jalan.length-1){
 //         arrjalan.push(str);
 //         str=''
 //     }
 // }
-// console.log(arrjalan)
+//     if ( arrjalan.length !== arrjalan ){
+//         result.push(arrjalan);
+//         }
+
+// console.log(result)
+
+var makan ='kamu makan bersama teman kamu';
+var count=0
+ var found = false 
+var smakan=[];
+var ringkas=[];
+var akhir=[];
+var result=[];
+var output=[];
+var group=[];
+var pisah= makan.split(' ');
+    for (var i =0; i<pisah.length;i++){
+        smakan.push(pisah[i][0].toUpperCase() + pisah[i].slice(1));
+    }  
+for (var j=0; j<smakan.length; j++){
+    for(var x=0; x<ringkas.length; x++){
+            if (smakan[j]==ringkas[x]){
+                found= true;
+            }
+    }
+    count++;
+    if ( count == 1  && found == false){
+        ringkas.push(smakan[j]);
+    }
+    count =0;
+    found= false;  
+}
+akhir= ringkas.sort();
+var parray= Math.max(akhir.length/2,1);
+    for(var k = 0; k<2 ; k++){
+        if(parray*(k+1)<= akhir.length){
+            result.push(akhir.slice(parray*k,parray*(k+1)));
+        }
+        result[0].splice(1);    
+    }
+
+console.log(result)
 
 // var jalan='jalan jalan dan makan makan enak';
 // var arrjalan= jalan.trim().split(' ');
@@ -108,4 +149,39 @@
 // }
 // group.push(kelipatan2);
 // group.push(kelipatan1);
-// console.log(group)
+
+// var makan = 'jalan jalan dan makan makan enak'
+
+//  var count=0
+//  var found = false 
+// var smakan=[];
+// var ringkas=[];
+// var akhir=[];
+// var result=[];
+// var output=[];
+// var group=[];
+// var pisah= makan.split(' ');
+//     for (var i =0; i<pisah.length;i++){
+//         smakan.push(pisah[i][0].toUpperCase() + pisah[i].slice(1));
+//     }  
+// for (var j=0; j<smakan.length; j++){
+//     for(var x=0; x<ringkas.length; x++){
+//             if (smakan[j]==ringkas[x]){
+//                 found= true;
+//             }
+//     }
+//     count++;
+//     if ( count == 1  && found == false){
+//         ringkas.push(smakan[j]);
+//     }
+//     count =0;
+//     found= false;  
+// }
+// akhir= ringkas.sort();
+//     var parray= Math.max(akhir.length/2,1);
+//     for(var k = 0; k<2 ; k++){
+//         if(parray*(k+1)<= akhir.length){
+//             result.push(akhir.slice(parray*k,parray*(k+1)));
+//         }
+//     }
+//     console.log(result)
