@@ -98,42 +98,42 @@
 
 // console.log(result)
 
-var makan ='kamu makan bersama teman kamu';
-var count=0
- var found = false 
-var smakan=[];
-var ringkas=[];
-var akhir=[];
-var result=[];
-var output=[];
-var group=[];
-var pisah= makan.split(' ');
-    for (var i =0; i<pisah.length;i++){
-        smakan.push(pisah[i][0].toUpperCase() + pisah[i].slice(1));
-    }  
-for (var j=0; j<smakan.length; j++){
-    for(var x=0; x<ringkas.length; x++){
-            if (smakan[j]==ringkas[x]){
-                found= true;
-            }
-    }
-    count++;
-    if ( count == 1  && found == false){
-        ringkas.push(smakan[j]);
-    }
-    count =0;
-    found= false;  
-}
-akhir= ringkas.sort();
-var parray= Math.max(akhir.length/2,1);
-    for(var k = 0; k<2 ; k++){
-        if(parray*(k+1)<= akhir.length){
-            result.push(akhir.slice(parray*k,parray*(k+1)));
-        }
-        result[0].splice(1);    
-    }
+// var makan ='kamu makan bersama teman kamu';
+// var count=0
+//  var found = false 
+// var smakan=[];
+// var ringkas=[];
+// var akhir=[];
+// var result=[];
+// var output=[];
+// var group=[];
+// var pisah= makan.split(' ');
+//     for (var i =0; i<pisah.length;i++){
+//         smakan.push(pisah[i][0].toUpperCase() + pisah[i].slice(1));
+//     }  
+// for (var j=0; j<smakan.length; j++){
+//     for(var x=0; x<ringkas.length; x++){
+//             if (smakan[j]==ringkas[x]){
+//                 found= true;
+//             }
+//     }
+//     count++;
+//     if ( count == 1  && found == false){
+//         ringkas.push(smakan[j]);
+//     }
+//     count =0;
+//     found= false;  
+// }
+// akhir= ringkas.sort();
+// var parray= Math.max(akhir.length/2,1);
+//     for(var k = 0; k<2 ; k++){
+//         if(parray*(k+1)<= akhir.length){
+//             result.push(akhir.slice(parray*k,parray*(k+1)));
+//         }
+//         result[0].splice(1);    
+//     }
 
-console.log(result)
+// console.log(result)
 
 // var jalan='jalan jalan dan makan makan enak';
 // var arrjalan= jalan.trim().split(' ');
